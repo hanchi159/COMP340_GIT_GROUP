@@ -48,6 +48,9 @@
     <ClCompile Include="NightMare.cpp">
       <Filter>Source Files\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="GiantSpider.cpp">
+      <Filter>Source Files\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Room.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="NightMare.h">
+      <Filter>Header Files\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantSpider.h">
       <Filter>Header Files\Enemy</Filter>
     </ClInclude>
   </ItemGroup>

@@ -32,6 +32,7 @@ void IcyBear::attackTarget(Enemy* player) {
 			healthLeft = player->getHealth() - (this->kungfuPunch - player->getArmor());
 			std::cout << this->name << " use Kungfu Punch to attack you. " << " The damage is " << this->kungfuPunch - player->getArmor() << ". " << "you has " << healthLeft << " health left." << endl;
 		}
+		this->energy -= 10;
 	}
 	//no energy regular attack
 	else {

@@ -1,1 +1,3 @@
-﻿  TextAdvanture.vcxproj -> D:\COMP340(ORGARNAZATION)\program\TextAdvanture\Debug\TextAdvanture.exe
+﻿  Adventurer.cpp
+d:\comp340(orgarnazation)\program\textadvanture\textadvanture\adventurer.cpp(8): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  TextAdvanture.vcxproj -> D:\COMP340(ORGARNAZATION)\program\TextAdvanture\Debug\TextAdvanture.exe

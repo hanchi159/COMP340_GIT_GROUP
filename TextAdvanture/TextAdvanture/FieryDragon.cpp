@@ -32,6 +32,7 @@ void FieryDragon::attackTarget(Enemy* player) {
 			healthLeft = player->getHealth() - (this->dragonRoar - player->getArmor());
 			std::cout << this->name << " use Dragon Roar to attack you. " << " The damage is " << dragonRoar - player->getArmor() << ". " << "you has " << player->getHealth() << " health left." << endl;
 		}
+		this->energy -= 10;
 	}
 	//no energy regular attack
 	else {

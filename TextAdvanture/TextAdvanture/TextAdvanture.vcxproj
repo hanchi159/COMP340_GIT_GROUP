@@ -118,6 +118,7 @@
     <ClCompile Include="Adventurer.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FieryDragon.cpp" />
+    <ClCompile Include="GiantSpider.cpp" />
     <ClCompile Include="IcyBear.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
@@ -129,6 +130,7 @@
     <ClInclude Include="Adventurer.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="FieryDragon.h" />
+    <ClInclude Include="GiantSpider.h" />
     <ClInclude Include="IcyBear.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="NightMare.h" />

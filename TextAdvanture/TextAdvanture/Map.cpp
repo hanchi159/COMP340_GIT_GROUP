@@ -46,6 +46,7 @@ Room* Map::setForestEntry() {
 Room* Map::setDesert() {
 	Room* Desert = new Room("DESERT", "This is desert world, one Dream Patrol roam around. He holds a bottle of water seem special.");
 	Enemy* dreamPatrol = new Enemy("Dream Patrol", 120, 60, 20);
+	Desert->addEnemy(new GiantSpider("Giant Spider",50, 200, 20));
 	dreamPatrol->addDrops(new Object("holy water"));
 	dreamPatrol->addDrops(new Object("iron suit"));
 	dreamPatrol->addDrops(new Object("iron sword"));

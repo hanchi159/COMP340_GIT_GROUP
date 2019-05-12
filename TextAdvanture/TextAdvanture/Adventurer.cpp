@@ -5,6 +5,7 @@
 Adventurer::Adventurer(string name, int attack, int health, int armor,int energy) :Enemy(name, attack, health, armor)
 {
 	this->energy = energy;
+	this->lighteningBall = attack * 1.2;
 }
 
 
@@ -78,7 +79,7 @@ void Adventurer::attackTarget(Enemy* target) {
 	int healthyLeft=0;
 	string nameEnemy = target->getName();
 	//ask which combat catagory user want to use
-	std::cout << "1.Body Attack\n" << "2.Magic Attack\n" << "3.Stuff Throw\n";
+	std::cout << "1.Body Attack\n" << "2.Magic Attack\n" << "3.Item Use\n";
 	std::getline(cin,userChoice);
 	//body attack
 	if (userChoice == "1") {
@@ -98,56 +99,62 @@ void Adventurer::attackTarget(Enemy* target) {
 	}
 	//magic attack
 	else if (userChoice == "2") {
-		//no magic ask user about 3 actions again
-		if(this->fireBall==0 && this->frozen==0) {
-			std::cout << "No magic power" << endl;
-			attackTarget(target);
-		}
 		//print powers user has ask which one they want to use
-		else {
-			std::cout << "Your Magic Power are:" << endl;
-			string magicChoice = " ";
-			if(fireBall !=0){
-				std::cout << "fire ball" << endl;
-			}
-			if (frozen != 0) {
-				std::cout << "frozen" << endl;
-			}
-			while (magicChoice == " ") {
-				std::cout << "Which Magic power you want to use? ";
-				std::getline(cin, magicChoice);
-				//fire ball attack
-				if (magicChoice == "fire ball" && this->fireBall != 0) {
-					if (energy < 50) {
-						std::cout << "Not enough energy!" << endl;
-					}
-					else {
-						this->energy -= 50;
-						healthyLeft = target->getHealth() - (this->fireBall - target->getArmor());
-						target->setHealth(healthyLeft);
-						std::cout << "You use fire ball to attack the " << nameEnemy << "." << " The damage is " << this->fireBall - target->getArmor() << "." << " " << nameEnemy << " has " << target->getHealth() << " health left." << endl;
-					}
-					
-				}
-				//frozen attack
-				else if (magicChoice == "frozen" && frozen != 0) {
-					if (energy < 30) {
-						std::cout << "Not enough energy!" << endl;
-					}
-					else {
-						this->energy -= 30;
-						healthyLeft = target->getHealth() - (this->frozen - target->getArmor());
-						target->setHealth(healthyLeft);
-						std::cout << "You froze the " << nameEnemy << "." << " The damage is " << this->frozen - target->getArmor() << "." << " " << nameEnemy << " has " << target->getHealth() << " health left." << endl;
-					}
-					
+		std::cout << "Your Magic Power are:" << endl;
+		string magicChoice = " ";
+		std::cout << "lightening ball" << endl;
+		if(fireBall !=0){
+			std::cout << "fire ball" << endl;
+		}
+		if (frozen != 0) {
+			std::cout << "frozen" << endl;
+		}
+		while (magicChoice == " ") {
+			std::cout << "Which Magic power you want to use? ";
+			std::getline(cin, magicChoice);
+			//fire ball attack
+			if (magicChoice == "fire ball" && this->fireBall != 0) {
+				if (energy < 30) {
+					std::cout << "Not enough energy!" << endl;
 				}
 				else {
-					std::cout<<magicChoice;
-
-					std::cout << "Not invalid power!" << endl;
-					magicChoice = " ";
+					this->energy -= 30;
+					healthyLeft = target->getHealth() - (this->fireBall - target->getArmor());
+					target->setHealth(healthyLeft);
+					std::cout << "You use fire ball to attack the " << nameEnemy << "." << " The damage is " << this->fireBall - target->getArmor() << "." << " " << nameEnemy << " has " << target->getHealth() << " health left." << endl;
 				}
+					
+			}
+			//frozen attack
+			else if (magicChoice == "frozen" && frozen != 0) {
+				if (energy < 20) {
+					std::cout << "Not enough energy!" << endl;
+				}
+				else {
+					this->energy -= 20;
+					healthyLeft = target->getHealth() - (this->frozen - target->getArmor());
+					target->setHealth(healthyLeft);
+					std::cout << "You froze the " << nameEnemy << "." << " The damage is " << this->frozen - target->getArmor() << "." << " " << nameEnemy << " has " << target->getHealth() << " health left." << endl;
+				}
+					
+			}
+			else if (magicChoice == "lightening ball" ) {
+				if (energy < 5) {
+					std::cout << "Not enough energy!" << endl;
+				}
+				else {
+					this->energy -= 5;
+					healthyLeft = target->getHealth() - (this->lighteningBall - target->getArmor());
+					target->setHealth(healthyLeft);
+					std::cout << "You throw a lightening ball to the " << nameEnemy << "." << " The damage is " << this->lighteningBall - target->getArmor() << "." << " " << nameEnemy << " has " << target->getHealth() << " health left." << endl;
+				}
+
+			}
+			else {
+				std::cout<<magicChoice;
+
+				std::cout << "Not invalid power!" << endl;
+				magicChoice = " ";
 			}
 
 		}
@@ -159,7 +166,7 @@ void Adventurer::attackTarget(Enemy* target) {
 		{
 			this->showInventory();
 			//ask which one they want to use to attack
-			std::cout << "Which one you want to use for attack(enter 'no' back to last menu):";
+			std::cout << "Which item you want to use?(enter 'no' back to last menu):";
 			std::getline(cin,inventoryAttack);
 			//no ask 3 actions again
 			if (inventoryAttack == "no") {
@@ -174,6 +181,12 @@ void Adventurer::attackTarget(Enemy* target) {
 					target->setHealth(healthyLeft);
 					std::cout<< "You use "<<item->getName()<< " to attack "<<nameEnemy<< "." << " The damage is " << item->getAttack() << "." << " " << nameEnemy << " has " << target->getHealth() << " health left." << endl;
 					this->inventory.erase(remove(inventory.begin(), inventory.end(), item), inventory.end());
+					break;
+				}
+				else {
+					this->useItem(inventoryAttack);
+					this->showInformation();
+					healthyLeft = 1;
 					break;
 				}
 			}

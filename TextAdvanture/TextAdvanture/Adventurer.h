@@ -16,6 +16,7 @@ public:
 
 private:
 	int energy;
+	int lighteningBall;
 	int frozen;
 	int fireBall;
 	bool portalKey;

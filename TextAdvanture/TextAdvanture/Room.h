@@ -3,6 +3,7 @@
 #include"FieryDragon.h"
 #include"IcyBear.h"
 #include"NightMare.h"
+#include"GiantSpider.h"
 #include<algorithm>
 class Room
 {
