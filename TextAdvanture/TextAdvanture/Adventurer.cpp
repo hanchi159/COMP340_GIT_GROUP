@@ -73,8 +73,13 @@ bool Adventurer::getPortalKey() {
 //attack enemy
 void Adventurer::attackTarget(Enemy* target) {
 	this->lighteningBall = int(attack * 1.2);
-	this->fireBall = this->attack * 2;
-	this->frozen = int(this->attack*1.5);
+	if (this->fireBall != 0) {
+		this->fireBall = this->attack * 2;
+	}
+	if (this->frozen != 0) {
+		this->frozen = int(this->attack*1.5);
+	}
+
 	//less and equal than 0, return
 	if (target->getHealth() <= 0) {
 		return;
