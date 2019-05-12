@@ -32,13 +32,14 @@ void NightMare::attackTarget(Enemy* player) {
 	}
 	//random power attack
 	else if (decision == 0) {
+		player->setHealth(healthLeft);
 		healthLeft = player->getHealth() - (this->psywave - player->getArmor());
 		std::cout << this->name << " use Psywave to attack you. " << " The damage is " << psywave - player->getArmor() << ". " << "you has " << player->getHealth() << " health left." << endl;
 	}
 	else if(decision == 1){
+		player->setHealth(healthLeft);
 		healthLeft = player->getHealth() - (this->psychoBoost - player->getArmor());
 		std::cout << this->name << " use Psycho Boost to attack you. " << " The damage is " << this->psychoBoost - player->getArmor() << ". " << "you has " << player->getHealth() << " health left." << endl;
 	}
-	player->setHealth(healthLeft);
 
 }
