@@ -1,3 +1,26 @@
 ﻿  Adventurer.cpp
-d:\comp340(orgarnazation)\program\textadvanture\textadvanture\adventurer.cpp(8): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  TextAdvanture.vcxproj -> D:\COMP340(ORGARNAZATION)\program\TextAdvanture\Debug\TextAdvanture.exe
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\adventurer.cpp(8): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Enemy.cpp
+  FieryDragon.cpp
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\fierydragon.cpp(8): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\fierydragon.cpp(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GiantSpider.cpp
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\giantspider.cpp(8): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\giantspider.cpp(21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  IcyBear.cpp
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\icybear.cpp(8): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\icybear.cpp(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Main.cpp
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\main.cpp(40): warning C4018: '<': signed/unsigned mismatch
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\main.cpp(58): warning C4018: '<': signed/unsigned mismatch
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\main.cpp(73): warning C4018: '<': signed/unsigned mismatch
+  Map.cpp
+  NightMare.cpp
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\nightmare.cpp(18): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Object.cpp
+  Room.cpp
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\room.cpp(28): warning C4018: '<': signed/unsigned mismatch
+d:\comp340(orgarnazation)\program\comp340_git_group\textadvanture\textadvanture\room.cpp(67): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  LINK : D:\COMP340(ORGARNAZATION)\program\COMP340_GIT_GROUP\TextAdvanture\Debug\TextAdvanture.exe not found or not built by the last incremental link; performing full link
+  TextAdvanture.vcxproj -> D:\COMP340(ORGARNAZATION)\program\COMP340_GIT_GROUP\TextAdvanture\Debug\TextAdvanture.exe

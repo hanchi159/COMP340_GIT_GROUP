@@ -5,7 +5,7 @@
 Adventurer::Adventurer(string name, int attack, int health, int armor,int energy) :Enemy(name, attack, health, armor)
 {
 	this->energy = energy;
-	this->lighteningBall = attack * 1.2;
+	this->lighteningBall = attack * 1.5;
 }
 
 
