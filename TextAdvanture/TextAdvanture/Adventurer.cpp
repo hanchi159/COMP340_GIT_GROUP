@@ -5,7 +5,8 @@
 Adventurer::Adventurer(string name, int attack, int health, int armor,int energy) :Enemy(name, attack, health, armor)
 {
 	this->energy = energy;
-	this->lighteningBall = attack * 1.5;
+	this->lighteningBall = int(attack * 1.2);
+	
 }
 
 
@@ -71,6 +72,9 @@ bool Adventurer::getPortalKey() {
 }
 //attack enemy
 void Adventurer::attackTarget(Enemy* target) {
+	this->lighteningBall = int(attack * 1.2);
+	this->fireBall = this->attack * 2;
+	this->frozen = int(this->attack*1.5);
 	//less and equal than 0, return
 	if (target->getHealth() <= 0) {
 		return;
